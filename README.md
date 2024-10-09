@@ -3,7 +3,7 @@ forest practical forecast
 
 0. 선정이유 및 기간
 
-- 이전 전공관련
+- 
 
 - 10월중 ~ 11월 ~
 
