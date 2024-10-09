@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # 앱등록
     'accounts',
+    'fires',
 
     'django.contrib.admin',
     'django.contrib.auth',
