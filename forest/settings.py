@@ -58,7 +58,8 @@ ROOT_URLCONF = 'forest.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,3 +126,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# 장고의 기본유저모델 사용하기
+#그래서 여기에 AUTH_USER_MODEL = 'accounts.User'를 안적어줄거다.
+
+AUTH_USER_MODEL = 'accounts.User'
