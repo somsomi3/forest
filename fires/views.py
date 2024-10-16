@@ -59,7 +59,8 @@ ENDPOINT = 'http://apis.data.go.kr/1400377/forestPoint/forestPointListGeongugSea
 
 def get_forest_fire_data():
     # API 요청 URL
-    url = f"{ENDPOINT}?serviceKey={API_KEY}&numOfRows=10&pageNo=1&excludeForecast=0&_type=json"
+    # url = f"{ENDPOINT}?serviceKey={API_KEY}&numOfRows=10&pageNo=1&excludeForecast=0&_type=json"
+    url = f"{ENDPOINT}?serviceKey={API_KEY}&numOfRows=10&pageNo=1&excludeForecast=0&_type=xml"
     
     # GET 요청 보내기
     response = requests.get(url)
@@ -69,6 +70,8 @@ def get_forest_fire_data():
         # JSON 데이터 파싱
         data = response.json()
         return data
+        # print(data)
+    
     else:
         print(f"Failed to fetch data: {response.status_code}")
         return None
